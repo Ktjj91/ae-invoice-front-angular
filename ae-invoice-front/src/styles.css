@@ -1,0 +1,10 @@
+@import "primeicons/primeicons.css";
+@import "tailwindcss";
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+}
+
+@layer tailwind-utilities {
+  @tailwind utilities;
+}

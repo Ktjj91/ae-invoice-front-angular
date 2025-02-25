@@ -1,0 +1,31 @@
+<p-table  [value]="customers()">
+  <ng-template #header>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Entrepise</th>
+      <th>adresse</th>
+      <th>email</th>
+      <th>siret</th>
+      <th>tvaIntraCom</th>
+      <th>Actions</th>
+    </tr>
+  </ng-template>
+  <ng-template #body let-customer>
+    <tr>
+      <td>{{ customer.name}}</td>
+      <td>{{ customer.fname}}</td>
+      <td>{{ customer.company}}</td>
+      <td>{{ customer.adress}}</td>
+      <td>{{ customer.email}}</td>
+      <td>{{ customer.siret}}</td>
+      <td>{{ customer.tvaIntracom}}</td>
+      <td>
+       <p-confirm-dialog />
+        <p-button (onClick)="deleteCustomer(customer.id)" class="ml" label="Supprimer" severity="danger"/>
+        <p-button class="ml" label="Modifier" severity="warn"/>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
