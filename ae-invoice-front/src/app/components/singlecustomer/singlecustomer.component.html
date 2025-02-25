@@ -1,0 +1,36 @@
+
+<div class="container">
+  <h1 class="h-center">Client {{customer()?.company}}</h1>
+
+  <form class="flex-form" [formGroup]="form">
+    <p-float-label variant="on">
+      <input autocomplete="off" id="name" pInputText formControlName="name" />
+      <label for="name">Nom</label>
+    </p-float-label>
+    <p-float-label variant="on">
+      <input autocomplete="off" id="fname" pInputText formControlName="fname" />
+      <label for="fname">Prénom</label>
+    </p-float-label>
+    <p-float-label variant="on">
+      <input autocomplete="off" id="compagny" pInputText formControlName="compagny" />
+      <label for="compagny">Entreprise</label>
+    </p-float-label>
+    <p-float-label variant="on">
+      <input autocomplete="off" id="adress" pInputText formControlName="adress" />
+      <label for="compagny">Adresse</label>
+    </p-float-label>
+    <p-float-label variant="on">
+      <input autocomplete="off" id="email" pInputText type="email" formControlName="email" />
+      <label for="email">Email</label>
+    </p-float-label>
+    <p-float-label variant="on">
+      <input autocomplete="off" id="siret" pInputText formControlName="siret" />
+      <label for="siret">Siret</label>
+    </p-float-label>
+    <p-float-label variant="on">
+      <input autocomplete="off" id="tvaIntracom" pInputText formControlName="tvaIntracom" />
+      <label for="tvaIntracom">tvaIntracom</label>
+    </p-float-label>
+    <p-button size="large"  class="btn-update" label="Modifier"></p-button>
+  </form>
+</div>

@@ -6,10 +6,11 @@ import {ButtonModule} from 'primeng/button';
 import {ConfirmationService} from 'primeng/api';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import {ConfirmDialog} from 'primeng/confirmdialog';
+import {RouterLink} from '@angular/router';
 
 @Component({
 selector: 'app-customer',
-  imports: [TableModule, ButtonModule, ConfirmPopupModule, ConfirmDialog],
+  imports: [TableModule, ButtonModule, ConfirmPopupModule, ConfirmDialog, RouterLink],
 templateUrl: './customer.component.html',
 styleUrl: './customer.component.css',
   providers:[ConfirmationService]
@@ -35,7 +36,7 @@ deleteCustomer(id:number) {
     message:`Etes vous sur de supprimer le client ? `,
     header: 'Confirmation',
     icon: 'pi pi-exclamation-triangle',
-    accept: ( ) => {
+    accept: () => {
       this.customerService.deleteCustomer(id).subscribe(_ => {
         this.loadCustomers();
       })

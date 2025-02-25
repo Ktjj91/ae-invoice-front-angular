@@ -4,7 +4,16 @@
 
 @layer tailwind-base {
 }
-
 @layer tailwind-utilities {
   @tailwind utilities;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+htlm,body{
+  height: 100%;
+  width: 100%;
 }

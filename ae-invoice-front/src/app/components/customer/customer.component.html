@@ -23,7 +23,7 @@
       <td>
        <p-confirm-dialog />
         <p-button (onClick)="deleteCustomer(customer.id)" class="ml" label="Supprimer" severity="danger"/>
-        <p-button class="ml" label="Modifier" severity="warn"/>
+        <p-button [routerLink]="['/customer',customer.id]" class="ml" label="Modifier" severity="warn"/>
       </td>
     </tr>
   </ng-template>
