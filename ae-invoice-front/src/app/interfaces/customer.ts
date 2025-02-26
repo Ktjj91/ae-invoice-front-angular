@@ -3,7 +3,7 @@ export interface Customer {
   name:string;
   fname:string;
   company:string;
-  adress:string;
+  address:string;
   email:string;
   siret:string;
   tvaIntracom:string;

@@ -2,7 +2,7 @@
 <div class="container">
   <h1 class="h-center">Client {{customer()?.company}}</h1>
 
-  <form class="flex-form" [formGroup]="form">
+  <form class="flex-form" [formGroup]="form" (ngSubmit)="onSubmit()">
     <p-float-label variant="on">
       <input autocomplete="off" id="name" pInputText formControlName="name" />
       <label for="name">Nom</label>
@@ -16,8 +16,8 @@
       <label for="compagny">Entreprise</label>
     </p-float-label>
     <p-float-label variant="on">
-      <input autocomplete="off" id="adress" pInputText formControlName="adress" />
-      <label for="compagny">Adresse</label>
+      <input autocomplete="off" id="address" pInputText formControlName="address" />
+      <label for="address">Adresse</label>
     </p-float-label>
     <p-float-label variant="on">
       <input autocomplete="off" id="email" pInputText type="email" formControlName="email" />
@@ -31,6 +31,6 @@
       <input autocomplete="off" id="tvaIntracom" pInputText formControlName="tvaIntracom" />
       <label for="tvaIntracom">tvaIntracom</label>
     </p-float-label>
-    <p-button size="large"  class="btn-update" label="Modifier"></p-button>
+    <button pButton type="submit"  size="large"  class="btn-update">Modifier</button>
   </form>
 </div>
