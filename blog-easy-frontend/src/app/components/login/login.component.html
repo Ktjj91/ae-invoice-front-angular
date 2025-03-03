@@ -1,0 +1,16 @@
+<div class="min-h-screen flex justify-center items-center">
+  <form (ngSubmit)="onSubmit()" [formGroup]="form" class="flex flex-col justify-center items-center">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input formControlName="email"  matInput placeholder="email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input formControlName="password" matInput type="password" placeholder="password">
+    </mat-form-field>
+    <button [disabled]="this.form.invalid" mat-raised-button>Connexion</button>
+
+  </form>
+
+</div>
