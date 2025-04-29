@@ -1,0 +1,9 @@
+<div class="flex justify-center items-center  min-h-screen">
+  <form  [formGroup]="form" (ngSubmit)="onsubmit()" class="flex flex-col space-y-3" >
+    <label for="email">Email</label>
+    <input [formControl]="email" class="input" type="email" name="" id="">
+    <label for="password">Mot de passe</label>
+    <input [formControl]="password" class="input" type="password" name="password" id="password">
+    <button type="submit" [disabled]="this.form.invalid" class="btn btn-primary">Connexion</button>
+  </form>
+</div>
